@@ -46,5 +46,19 @@ namespace StringValidator.Tests
 
             CollectionAssert.AreEqual(expected, validatedString);
         }
+
+        [TestMethod()]
+        public void ValidateShortStringTest()
+        {
+            var expected = new List<string>();
+            expected.Add("X");
+
+            var validatestring = new List<string>();
+            validatestring.Add("XXX");
+
+            var validatedString = _validator.ValidateString(validatestring);
+
+            CollectionAssert.AreEqual(expected, validatedString);
+        }
     }
 }

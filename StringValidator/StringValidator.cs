@@ -22,12 +22,12 @@ namespace StringValidator
                 result2 = result;
                 result = removeDuplicates(result2.ToCharArray());
                 if (string.IsNullOrEmpty(result))
-                    validatedString.Add("EMPTY STRING");
-                else
+                    result = "EMPTY STRING";
+                else if (result.Length >= 15)
                 {
                     result = result.Substring(0, 15);
-                    validatedString.Add(result);
                 }
+                validatedString.Add(result);
             }
             return validatedString;
         }
