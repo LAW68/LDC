@@ -1,2 +1,0 @@
-# LDC
-Development Test
